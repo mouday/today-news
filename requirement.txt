@@ -1,3 +1,4 @@
 peewee
 requests
 flask
+scrapy
