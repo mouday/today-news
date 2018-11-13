@@ -12,8 +12,13 @@
     <h1>今日头条</h1>
     <div class="toolbar">
         <a target="_self" class="home" href="/">首 页</a>
-        <a target="_self" href="?page={{ page - 1 }}">上一页</a>
-        <a target="_self" href="?page={{ page + 1 }}">下一页</a>
+        {% if tag %}
+            <a target="_self" href="?tag={{ tag }}&page={{ page - 1 }}">上一页</a>
+            <a target="_self" href="?tag={{ tag }}&page={{ page + 1 }}">下一页</a>
+        {% else %}
+            <a target="_self" href="?page={{ page - 1 }}">上一页</a>
+            <a target="_self" href="?page={{ page + 1 }}">下一页</a>
+        {% endif %}
         <a target="_self" href="crawl">更新数据</a>
     </div>
     {% for item in rows %}
@@ -24,7 +29,7 @@
             <div class="right">
                 <div class="title"><a href="{{ item.article_url }}">{{ item.title }}</a></div>
                 <div class="bottom">
-                    <div>{{ item.tag }}</div>
+                    <div><a href="?tag={{ item.tag }}" target="_self">{{ item.tag }}</a></div>
                     <div>{{ item.publish_time }}</div>
                     <div><a href="{{ item.source_url }}">{{ item.source }}</a></div>
                 </div>

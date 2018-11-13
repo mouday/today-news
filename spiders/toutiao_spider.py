@@ -47,6 +47,7 @@ categories = {
     "news_career": "职业",
     "news": "新闻",
     "news_society": "社会",
+    "news_culture": "文化",
     "emotion": "情感",
     "news_agriculture": "农村",
     "video_domestic": "视频",
