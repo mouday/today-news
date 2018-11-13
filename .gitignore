@@ -1,0 +1,4 @@
+*.db
+static/images
+.idea/
+__pycache__/

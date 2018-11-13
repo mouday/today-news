@@ -1,0 +1,94 @@
+
+.main {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.main h1 {
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+.toolbar {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.toolbar a {
+    width: 100px;
+    padding: 3px 10px;
+    text-decoration: none;
+    color: #444;
+}
+
+.toolbar a:hover {
+    background-color: #ed4040;
+    color: #fff;
+}
+
+.toolbar .home {
+    background-color: #ed4040;
+    color: #fff;
+}
+
+.item {
+    width: 800px;
+    height: 102px;
+    margin: 3px 0;
+    position: relative;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.left {
+    width: 180px;
+    height: 100px;
+    float: left;
+}
+
+.right {
+    width: 600px;
+    height: 100px;
+    float: left;
+}
+
+img {
+    width: 156px;
+    height: 100px;
+}
+
+.title {
+    font-size: 20px;
+    width: 600px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: grey;
+}
+
+.title a {
+    color: #222222;
+    text-decoration: none;
+}
+
+.bottom a {
+    text-decoration: none;
+}
+
+.bottom a:hover {
+    color: #333;
+}
+
+.bottom {
+    color: #87a5b5;
+    margin-top: 10px;
+}
+
+.bottom a {
+    color: #87a5b5;
+}
+
+.bottom div {
+    float: left;
+    margin-right: 10px;
+}
+
+

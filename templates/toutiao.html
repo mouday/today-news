@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>今日头条</title>
+    <base target="_blank">
+    <link rel="stylesheet" href="static/css/toutiao.css">
+
+</head>
+<body>
+<div class="main">
+    <h1>今日头条</h1>
+    <div class="toolbar">
+        <a target="_self" class="home" href="/">首 页</a>
+        <a target="_self" href="?page={{ page - 1 }}">上一页</a>
+        <a target="_self" href="?page={{ page + 1 }}">下一页</a>
+        <a target="_self" href="crawl">更新数据</a>
+    </div>
+    {% for item in rows %}
+        <div class="item">
+            <div class="left">
+                <div class="image"><img src="{{ item.image }}" alt=""></div>
+            </div>
+            <div class="right">
+                <div class="title"><a href="{{ item.article_url }}">{{ item.title }}</a></div>
+                <div class="bottom">
+                    <div>{{ item.tag }}</div>
+                    <div>{{ item.publish_time }}</div>
+                    <div><a href="{{ item.source_url }}">{{ item.source }}</a></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>
