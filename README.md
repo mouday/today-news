@@ -48,3 +48,33 @@ python run.py
 
 ```
 访问地址就可以打开：http://127.0.0.1:5000/
+
+
+## 扩展
+如果需要更多的新闻源，可以自己抓取新的新闻源，放在`spiders`文件夹下，按照如下字段解析
+
+```python
+item = {
+    "title": title,   # 新闻标题
+    "article_url": article_url,  # 新闻链接
+    "source": source,   # 新闻发布者
+    "source_url": source_url,  # 发布者链接
+    "summary": summary,   # 新闻概要
+    "tag": tag,  # 新闻标签
+    "publish_time": publish_time,  # 新闻发布时间,datetime类型
+    "image": image,  # 新闻图片
+    }
+
+```
+
+将解析好的`item` 调用函数存入数据库
+```python
+from models import ArticleModelUtils
+
+ArticleModelUtils.insert(item)
+```
+
+这样前台就可以显示了
+
+当然，如果有好的新闻源，可以提交到这个仓库，6小时之内会给出答复
+
