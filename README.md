@@ -6,6 +6,14 @@
 ![](images/toutiao.png)
 
 
+## 启动运行
+```
+git clone https://github.com/mouday/today-news.git
+cd today-news
+pip install -r requirement.txt
+python run.py
+```
+
 抓取源：
 
 1. 今日头条app新闻
