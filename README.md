@@ -47,3 +47,4 @@ pip install -r requirement.txt
 python run.py
 
 ```
+访问地址就可以打开：http://127.0.0.1:5000/
