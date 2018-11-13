@@ -1,17 +1,17 @@
 
-# toutiao项目说明
+# Today News
 
-仿照今日头条，做一个自己的头条
+## 项目简介
+
+通过抓取微信文章和今日头条新闻，仿照今日头条，打造一个自己的今日头条
 
 ![](images/toutiao.png)
 
 
-## 启动运行
+## 基本思路
+
 ```
-git clone https://github.com/mouday/today-news.git
-cd today-news
-pip install -r requirement.txt
-python run.py
+新闻下载 -> 新闻存储 -> 新闻展示
 ```
 
 抓取源：
@@ -30,4 +30,20 @@ https://weixin.sogou.com/
 
 ```
 static/images
+```
+
+## 项目使用模块
+
+- 下载器使用了：requests
+- 解析器使用了：scrapy.Selector
+- 存储器使用了：peewee
+- web框架使用了：Flask
+
+## 启动运行
+```
+git clone https://github.com/mouday/today-news.git
+cd today-news
+pip install -r requirement.txt
+python run.py
+
 ```
