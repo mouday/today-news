@@ -78,3 +78,5 @@ ArticleModelUtils.insert(item)
 
 当然，如果有好的新闻源，可以提交到这个仓库，6小时之内会给出答复
 
+## 转载
+本项目已推荐给微信公众号：Python那些事（微信号：PythonSomething），推送的文章内容质量还不错，在同类公众号里边属于中上等了，学习Python可以关注
