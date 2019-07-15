@@ -14,7 +14,7 @@ from datetime import datetime
 
 import requests
 import urllib3
-from scrapy import Selector
+from parsel import Selector
 
 from models import ArticleModelUtils
 from .image_download import download
@@ -24,11 +24,11 @@ urllib3.disable_warnings()
 
 def crawl_weixin(url, tag):
     headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:64.0) Gecko/20100101 Firefox/64.0"
     }
     response = requests.get(url, headers=headers)
     response.encoding = response.apparent_encoding
-    sel = Selector(response)
+    sel = Selector(text=response.text)
     lis = sel.css(".news-list li")
     for li in lis:
         image_url = li.css(".img-box img::attr(src)").extract_first()

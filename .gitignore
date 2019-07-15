@@ -2,3 +2,5 @@
 static/images
 .idea/
 __pycache__/
+PageParser
+PythonBean

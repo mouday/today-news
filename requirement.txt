@@ -1,4 +1,4 @@
 peewee
 requests
 flask
-scrapy
+parsel

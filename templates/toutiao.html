@@ -10,8 +10,12 @@
 <body>
 <div class="main">
     <h1>今日头条</h1>
+
+    <div class="hide" id="data" tag="{{ tag }}" page="{{ page }}"></div>
+
     <div class="toolbar">
         <a target="_self" class="home" href="/">首 页</a>
+
         {% if tag %}
             <a target="_self" href="?tag={{ tag }}&page={{ page - 1 }}">上一页</a>
             <a target="_self" href="?tag={{ tag }}&page={{ page + 1 }}">下一页</a>
@@ -21,21 +25,28 @@
         {% endif %}
         <a target="_self" href="crawl">更新数据</a>
     </div>
+
     {% for item in rows %}
         <div class="item">
             <div class="left">
                 <div class="image"><img src="{{ item.image }}" alt=""></div>
             </div>
+
             <div class="right">
                 <div class="title"><a href="{{ item.article_url }}">{{ item.title }}</a></div>
                 <div class="bottom">
-                    <div><a href="?tag={{ item.tag }}" target="_self">{{ item.tag }}</a></div>
                     <div>{{ item.publish_time }}</div>
+                    <div><a href="?tag={{ item.tag }}" target="_self">{{ item.tag }}</a></div>
                     <div><a href="{{ item.source_url }}">{{ item.source }}</a></div>
                 </div>
             </div>
         </div>
     {% endfor %}
 </div>
+
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script src="/static/js/scroll-event.js" charset="utf-8"></script>
+<script src="/static/js/toutiao.js" charset="utf-8"></script>
+
 </body>
 </html>

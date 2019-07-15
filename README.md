@@ -80,3 +80,19 @@ ArticleModelUtils.insert(item)
 
 ## 转载
 本项目已推荐给微信公众号：Python那些事（微信号：PythonSomething），推送的文章内容质量还不错，在同类公众号里边属于中上等了，学习Python可以关注
+
+## TODO
+sf: https://segmentfault.com/t/python
+掘金： https://juejin.im/tag/Python
+知乎：https://www.zhihu.com/topic/19552832/hot
+csdn： https://www.csdn.net/nav/newarticles
+
+
+# Python头条
+
+TODO:
+爬虫模块
+数据模块
+接口模块
+前端模块
+app模块
